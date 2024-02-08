@@ -3,6 +3,7 @@
 void setup()
 {
   size(1010,800);
+  frameRate(1);
 }
 
 void draw()
@@ -10,14 +11,17 @@ void draw()
   background(0);
     noFill();
     strokeWeight(6);
-    translate(width * 0.25, height * 0.25);
+    translate(width * 0.20, height * 0.20);
     int r = 100;
-    int minEr = -50;
-    int maxEr = 50;
+    int minEr = -40;
+    int maxEr = 40;
+    int offsetmin = -100;
+    int offsetmax = 100;
     var random = random(minEr,maxEr);
+    var offset = random(offsetmin,offsetmax);
     // First Block
       stroke(#B53838);
-        quad(r + random,-r,-r,-r,r,r,-r,r); // First
+        quad(r + random + offset,-r,-r + random + offset,-r,-r + random + offset,r,r + random,r); // First
        translate(width * 0.25, height * 0.25);
     // Second Block
        stroke(#332A7C);
