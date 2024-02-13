@@ -15,21 +15,23 @@ void draw()
     int r = 100;
     int minEr = -40;
     int maxEr = 40;
-    int offsetmin = -100;
-    int offsetmax = 100;
+    int offsetmin = -30;
+    int offsetmax = 30;
     var random = random(minEr,maxEr);
     var offset = random(offsetmin,offsetmax);
     // First Block
       stroke(#B53838);
-        quad(r + random + offset,-r,-r + random + offset,-r,-r + random + offset,r,r + random,r); // First
+        quad(r + random + offset,-r - offset,-r - random + offset,-r,-r + random + offset,r,r + random,r); // First   
+        quad(r + random + offset,-r - offset,-r - random + offset,-r,-r + random + offset,r,r + random,r); // First  
        translate(width * 0.25, height * 0.25);
+      
     // Second Block
        stroke(#332A7C);
         quad(227,46,395,25,324,158,201,191); // First
         quad(227,46,395,25,324,158,201,191); // Second
         quad(227,46,395,25,324,158,201,191); // Third
         
-       if (frameCount == 6){
+       if (frameCount == 1){
          noLoop();
        }
        
