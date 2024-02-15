@@ -67,6 +67,7 @@ void draw()
     fill(#000000);
     textFont(retroFont);
     textSize(120);
+    textAlign(CENTER);
     text("SELECTS",297,499);
     
  // The Text \\
