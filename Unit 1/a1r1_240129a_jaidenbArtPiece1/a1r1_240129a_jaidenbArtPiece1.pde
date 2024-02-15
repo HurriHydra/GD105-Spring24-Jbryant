@@ -2,39 +2,180 @@
 
 void setup()
 {
-  size(1010,800);
-  frameRate(1);
+  size(1150,950);
+    background(0);
+    noFill();
 }
 
 void draw()
 {
-  background(0);
-    noFill();
+  
+// ( Variables ) \\
+
     strokeWeight(6);
-    translate(width * 0.20, height * 0.20);
-    int r = 100;
+    int r = 60;
     int minEr = -40;
     int maxEr = 40;
-    int offsetmin = -30;
-    int offsetmax = 30;
-    var random = random(minEr,maxEr);
-    var offset = random(offsetmin,offsetmax);
-    // First Block
-      stroke(#B53838);
-        quad(r + random + offset,-r - offset,-r - random + offset,-r,-r + random + offset,r,r + random,r); // First   
-        quad(r + random + offset,-r - offset,-r - random + offset,-r,-r + random + offset,r,r + random,r); // First  
-       translate(width * 0.25, height * 0.25);
+    
+// ( First Row ) \\
+
+      stroke(#B53838); // Red
+      translate(width * 0.12, height * 0.10);
+      quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+
+      stroke(#8420AF); // Magenta
+      translate(width * 0.15, 0);
+      quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
       
-    // Second Block
-       stroke(#332A7C);
-        quad(227,46,395,25,324,158,201,191); // First
-        quad(227,46,395,25,324,158,201,191); // Second
-        quad(227,46,395,25,324,158,201,191); // Third
-        
-       if (frameCount == 1){
-         noLoop();
-       }
+      stroke(#6AEAFF); // Light Blue
+      translate(width * 0.15, 0);
+      quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+
+      stroke(#B6F4FA); // Pastel Blue
+      translate(width * 0.15, 0);
+      quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+
+      stroke(#FAFF03); // Yellow
+      translate(width * 0.15, 0);
+      quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+      
+      stroke(#7EB5FF); // Weirdly Colored Blue
+      translate(width * 0.15, 0);
+      quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+      
+// ( Second Row ) \\
+     
+       stroke(#136F14); // Green
+       translate(-width * 0.75, height * 0.16);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+      
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+      
+       stroke(#B6F4FA); // Pastel Blue
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+      
+       stroke(#FAFF03); // Yellow
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#B6F4FA); // Pastel Blue
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#8420AF); // Magenta
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+// ( Third Row ) \\
+
+       stroke(#8420AF); // Magenta
+       translate(-width * 0.75, height * 0.16);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+      
+       stroke(#FAFF03); // Yellow
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+      
+       stroke(#B6F4FA); // Pastel Blue
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#8420AF); // Magenta
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+// ( Fourth Row ) \\
+       
+       stroke(#332A7C); // Purple
+       translate(-width * 0.75, height * 0.16);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#B53838); // Red
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#FAFF03); // Yellow
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#B53838); // Red
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#136F14); // Green
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+
+// ( Fifth Row ) \\
+       
+       stroke(#B6F4FA); // Pastel Blue
+       translate(-width * 0.75, height * 0.16);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#136F14); // Green
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#FAFF03); // Yellow
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#8420AF); // Magenta
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+// ( Sixth Row ) \\
+
+       stroke(#7EB5FF); // Weirdly Colored Blue
+       translate(-width * 0.75, height * 0.16);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#B6F4FA); // Pastel Blue
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#8E1E1E); // Dark Red
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#FAFF03); // Yellow
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
+       
+       stroke(#332A7C); // Purple
+       translate(width * 0.15, 0);
+       quad(-r + random(minEr,maxEr),  -r + random(minEr,maxEr),  r + random(minEr,maxEr),  -r + random(minEr,maxEr) ,r + random(minEr,maxEr) , r + random(minEr,maxEr) , -r + random(minEr,maxEr),   r + random(minEr,maxEr));
        
         
-        
+       if (frameCount == 6){
+         noLoop();
+         save("JaidenbArtPiece1.png");
+       }   
 }
