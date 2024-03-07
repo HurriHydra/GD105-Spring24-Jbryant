@@ -1,4 +1,4 @@
-// (Assignment 1: Collage of images) \\
+// (Assignment 2, Recipe 1: Collage of images) \\
 // This collage is a bunch of images from various rpgs that I deem my favorite \\
 
 
