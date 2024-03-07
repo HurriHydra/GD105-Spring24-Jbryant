@@ -2,7 +2,7 @@
 PImage Ducky;
 
 float progress;
-int frameEnd = 50; // change this to adjust the length of the animation
+int frameEnd = 50; 
 
 void setup(){
   size(1000,800);
@@ -44,8 +44,7 @@ fill(#CFFAF6);
 strokeWeight(0);
 rect(136,536,749,62);
 
-PVector OutOfWater, InWater;
-OutOfWater = new PVector(242,129);
-InWater =  new PVector(242,520);
-
+if (frameCount * 0.05 < TAU * 1.0){
+  saveFrame("frames/####.png");
+ }
 }
