@@ -44,7 +44,7 @@ fill(#CFFAF6);
 strokeWeight(0);
 rect(136,536,749,62);
 
-if (frameCount * 0.05 < TAU * 1.0){
+if (frameCount * 0.05 < TAU * 2.5){
   saveFrame("frames/####.png");
  }
 }
