@@ -1,4 +1,13 @@
-// (Assignment 2, Recipe 4: Gif) \\
+/*
+  Assignment 2, Prompt 4
+  The Gif
+  
+  Simple gif that I made using an image and other objects. I think this one is probably
+  my least favorite out of my assignments.
+  
+*/
+
+// declare your global variable(s) at the top, outside of any block\
 PImage Ducky;
 
 float progress;

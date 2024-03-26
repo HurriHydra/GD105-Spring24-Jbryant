@@ -1,6 +1,11 @@
-// (Assignment 2, Recipe 1: Collage of images) \\
-// This collage is a bunch of images from various rpgs that I deem my favorite \\
-
+/*
+  Assignment 2, Prompt 1
+  Collage Piece
+  
+  This assignment just includes a bunch of rpg games I like through images. Some
+  of my favorites can be seen in each corner.
+  
+*/
 
 
 // (Background Images) \\

@@ -1,4 +1,15 @@
- PImage theMan;
+/*
+  Assignment 2, Prompt 3
+  Mouse React
+  
+  The character from the background is from OFF, a really good classic rpg that I
+  like. The characters eyes are supposed to follow your mouse movement.
+  
+*/
+
+// declare your global variable(s) at the top, outside of any block\
+
+PImage theMan;
 PVector posEye1 = new PVector(565, 700); 
 PVector posEye2 = new PVector(944,712); 
 
