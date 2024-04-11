@@ -1,5 +1,11 @@
   PFont text;
-
+  color c = color(191,255,254);
+  
+  color from = c;
+  color to = fill(#878A8E);
+  
+  color pointA = lerpColor(from, to, .35)
+  color pointB = lerpColor(from, to, .60)
 /*
   Assignment 3, Prompt 2
   Clock
@@ -15,27 +21,32 @@ void draw(){
   background(#83c3ff);
   int h = hour();
   int s = second(); 
+  
   int m = minute(); 
+
+  
+  
+    strokeWeight(0);
+  float wc = map(m,0,59, color(191, 240, 254), c);
+  fill(wc); // starter color #BFFFFE
+  float wt = map(s,0,59,height,309);
+
+  rect(96,wt,142,557); //845 for Y | THIS IS THE WATER
   
   strokeWeight(5);
     noFill();
-  rect(93,128,143,655,64);
+  rect(93,251,143,655,64); // TUBE
     fill(#AFAFAF);
-  rect(55,118,220,64,92);
+  rect(55,246,220,64,92);
   
-  strokeWeight(0);
-  fill(#BFFFFE);
-  rect(96,224,139,557,64);
+
   
   strokeWeight(3);
-  
-   fill(#FFDD31);
-  circle(163,264,25);
   
   line(483,310,95,312);
   line(483,438,94,443);
   line(483,563,94,568);
-  line(483,685,95,686);
+  line(483,779,95,780);
   
   fill(#000000);
   textFont(text);
@@ -48,12 +59,13 @@ void draw(){
   text("15",522,576);
   
   textFont(text);
-  text("20",522,697);
+  text("1 minute",515,791);
   
+  // (Stuff for time) \\
   textFont(text);
   text(h,642,416);
   
   textFont(text);
-  text(s,717,498);
+  text(s,723,417);
 
 }
