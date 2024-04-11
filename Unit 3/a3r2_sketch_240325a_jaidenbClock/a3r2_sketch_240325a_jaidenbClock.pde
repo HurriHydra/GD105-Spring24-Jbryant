@@ -1,4 +1,4 @@
-PFont text;
+  PFont text;
 
 /*
   Assignment 3, Prompt 2
@@ -12,17 +12,20 @@ void setup(){
 }
 
 void draw(){
-  background(#74F26E);
+  background(#83c3ff);
+  int h = hour();
+  int s = second(); 
+  int m = minute(); 
   
   strokeWeight(5);
-  fill(#AFAFAF);
+    noFill();
   rect(93,128,143,655,64);
     fill(#AFAFAF);
   rect(55,118,220,64,92);
   
   strokeWeight(0);
   fill(#BFFFFE);
-  rect(96,225,139,557,64);
+  rect(96,224,139,557,64);
   
   strokeWeight(3);
   
@@ -47,5 +50,10 @@ void draw(){
   textFont(text);
   text("20",522,697);
   
+  textFont(text);
+  text(h,642,416);
+  
+  textFont(text);
+  text(s,717,498);
 
 }
