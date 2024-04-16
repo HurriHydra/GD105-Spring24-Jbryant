@@ -1,6 +1,9 @@
 /*
   Assignment 3, Prompt 3
   Moire
+  
+  This art piece is supposed to represent a flower and I thought it looked nice. There
+  isn't a lot of code but the design for it matches what a moire can look like.
 */
 
 void setup(){
