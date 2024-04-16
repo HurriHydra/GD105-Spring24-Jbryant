@@ -8,43 +8,29 @@
 */
 
 
-int Cdays = 6;
-PVector planets[];
+int Cdays = 7;
+PVector[] planets;
 
 void setup(){
     size(777,777);
-    PVector []planets = new PVector[Cdays];
+    planets = new PVector[7];
     
-     
-   for (int i = 0; i < Cdays; i++){
+    planets[0]= new PVector(73,364,124); // The Z in the arrays/PVector mean the size for the planets.
+    planets[1] = new PVector(237,366,188); 
+    planets[2]= new PVector(374,360,62); 
+    planets[3]= new PVector(436,362,32); 
+    planets[4]= new PVector(532,369,136);
+    planets[5]= new PVector(640,362,52);
+    planets[6]= new PVector(722,362,89);
 
-    int []days = new int[Cdays];
-    planets[i] = new PVector(300,150);
-  
-    days[i] = 1;
-  }
-  
 }
 
 void draw(){
-  background(#00074B); // 1
+  background(#00074B);
   
-  circle(73,364,124); // 1
-  
- circle(230,366,161); // 2
- 
- circle(358,358,62); // 3
- 
- circle(432,358,32); // 4
- 
- circle(552,354,175); // 5
- 
- circle(697,350,88); // 6
- 
- circle(393,644,167); // 7
- 
   for (int i = 0; i < Cdays; i++){
-
-  // circle(planets[i].x,25,25);
+ 
+    circle(planets[i].x, planets[i].y, planets[i].z);
+    
   }
 }
