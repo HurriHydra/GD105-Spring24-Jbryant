@@ -2,9 +2,17 @@
   Assignment 3, Prompt 1
   Calendar
   
- This is supposed to be a planet themed calendar but it is extremely difficult. There is going to be stars popping up
- to indicate the amount of current days in the month. There are 12 planets that represent the month with
- it's color.
+ I've made a planet themed calendar and I thought it was really cool and unique. 
+ 
+ The way it works:
+ 
+ Days: There is going to be stars popping up to indicate the amount of current days in the month.
+ 
+ Months: There are 12 planets that represent the month with it's color. An example being, if the month "May" then the fifth planet will light up red.
+ 
+ Years: The year is just text that make it easier for people to understand that it's some type of calendar.
+
+ 
 */
 
 // (Setting up variables and arrays) \\ 
@@ -29,8 +37,9 @@ void setup(){
     size(777,777);
     planets = new PVector[12];
 
-    
-    planets[0]= new PVector(105,322,124); // The Z in the arrays/PVector mean the size for the planets.
+// (Setting up each planet) \\
+
+    planets[0]= new PVector(105,322,124); 
     planets[1] = new PVector(228,178,188); 
     planets[2]= new PVector(391,115,62); 
     planets[3]= new PVector(499,137,32); 
@@ -45,7 +54,8 @@ void setup(){
     
     yeartext = createFont("Calibri-48.vlw",75);
     planettext = createFont("Calibri-48.vlw",17);
-    
+
+// (Setting up how the stars work, similar to unit 2 like I said so nothing too crazy) \\
  for(int i = 0; i < stardayX.length; i++){
    stardayX[i] = int(random(min,max));
  }
@@ -64,7 +74,7 @@ void draw(){
   text(backgroundyear,310,74);
   strokeWeight(5);
    
-   for(int i = 0; i < stardaymax; i += currentstar){
+   for(int i = 0; i < stardaymax; i += currentstar){ // This checks the current day and places a point to indicate the current day. \\
      if(i == day()){
        break;
      }
@@ -76,15 +86,10 @@ void draw(){
   strokeWeight(1);
   
   for (int i = 0; i < monthplanets; i ++){
- 
- /*for (i = 0; i == starday; starday++){
-   circle(random(20,20),random(20,20),5);
- } */
-
 
 // ( PLANET MONTHS ) \\
 
- switch(month()){ // Months (Idk what its gonna do for now)
+ switch(month()){ // Each month a planet will light up with it's color. \\
 
    case 1:
    println("January");
