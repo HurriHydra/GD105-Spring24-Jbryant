@@ -7,11 +7,21 @@
  it's color.
 */
 
+// (Setting up variables and arrays) \\ 
 PFont yeartext;
 PFont planettext;
+
 int monthplanets = 12;
 int backgroundyear = year();
-int starday = day();
+
+int []stardayX = new int[250]; 
+int []stardayY = new int[200]; // Similar to unit 2, I wanted to use the same method
+int stardaymax = 31;
+int currentstar = day();
+
+int min = 250;
+int max = 480;
+
 PVector[] planets;
 
 
@@ -35,6 +45,15 @@ void setup(){
     
     yeartext = createFont("Calibri-48.vlw",75);
     planettext = createFont("Calibri-48.vlw",17);
+    
+ for(int i = 0; i < stardayX.length; i++){
+   stardayX[i] = int(random(min,max));
+ }
+
+ for(int i = 0; i < stardayY.length; i++){
+   stardayY[i] = int(random(min,max));
+  }
+  
 }
 
 void draw(){
@@ -43,6 +62,18 @@ void draw(){
   
   textFont(yeartext);
   text(backgroundyear,310,74);
+  strokeWeight(5);
+   
+   for(int i = 0; i < stardaymax; i += currentstar){
+     if(i == day()){
+       break;
+     }
+    
+    point(stardayX[i],stardayY[i]);
+  }
+  
+  stroke(#FFFFFF);
+  strokeWeight(1);
   
   for (int i = 0; i < monthplanets; i ++){
  
