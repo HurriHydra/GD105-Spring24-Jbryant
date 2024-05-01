@@ -30,6 +30,7 @@ void draw(){
     // (Flower) \\
     square(-154 + i, -144  , -123 + i);
     rotate(343);
+    scale(1.002);
     rotate(frameCount/6000.00);
   }
   
