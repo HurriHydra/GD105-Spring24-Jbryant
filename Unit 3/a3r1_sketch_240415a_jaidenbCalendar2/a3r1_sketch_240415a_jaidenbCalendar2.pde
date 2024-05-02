@@ -22,13 +22,13 @@ PFont planettext;
 int monthplanets = 12;
 int backgroundyear = year();
 
-int []stardayX = new int[250]; 
-int []stardayY = new int[200]; // Similar to unit 2, I wanted to use the same method
+int []stardayX = new int[259]; 
+int []stardayY = new int[500]; // Similar to unit 2, I wanted to use the same method
 int stardaymax = 31;
 int currentstar = day();
 
-int min = 250;
-int max = 480;
+int min = 280;
+int max = 500;
 
 PVector[] planets;
 
@@ -72,9 +72,9 @@ void draw(){
   
   textFont(yeartext);
   text(backgroundyear,310,74);
-  strokeWeight(5);
+  strokeWeight(2.6);
    
-   for(int i = 0; i < stardaymax; i += currentstar){ // This checks the current day and places a point to indicate the current day. \\
+   for(int i = 0; i < stardaymax; i++){ // This checks the current day and places a point to indicate the current day. \\
      if(i == day()){
        break;
      }
