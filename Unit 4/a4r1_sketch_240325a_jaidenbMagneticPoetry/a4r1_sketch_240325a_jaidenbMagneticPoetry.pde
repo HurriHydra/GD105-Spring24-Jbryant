@@ -20,3 +20,7 @@ void setup(){
 void draw(){
   println(Love + Kisses);
 }
+
+class Hewlo {
+  
+}
