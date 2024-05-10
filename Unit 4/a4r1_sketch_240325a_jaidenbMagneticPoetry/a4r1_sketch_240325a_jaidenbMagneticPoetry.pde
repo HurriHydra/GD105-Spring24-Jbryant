@@ -2,11 +2,11 @@
   Assignment 4, Prompt 1
   Magnetic Poetry
   
- 
- 
- 
+  Art Piece: Unusual Love Poem by Andrew Belsey (1987)
+  Source: https://www.themarginalian.org/2014/05/23/typewriter-art-laurence-king/
+
 */
-//Box[] cheese;
+Bottles bottleData;
 
 PFont test;
 
@@ -24,35 +24,33 @@ int b2X = 520;
 
 void setup(){
   size(1000,1000);
-  test = loadFont("ArialMT-48.vlw");
+  strokeWeight(4);
+  
+  test = loadFont("TimesNewRomanPSMT-48.vlw");
   textFont(test);
   textSize(39);
-  fill(#000000);
+  textAlign(CENTER);
+ bottleData = new Bottles(75,800,747,600);
+
 }
 
 void draw(){
   background(#EDEDED);
-  
+/*  
   for(int i = 0; i < bottlesWidth; i++){
   text(love, b1X + (bottlesWidth/1) * i , 800);
-  text(kisses, b2X + (bottlesWidth/1) * i , 800);
+  //text(kisses, b2X + (bottlesWidth/1) * i , 800);
+  }
+  */
+  float spacing = 20;
+
+  for (float x = 47; x <= 200; x += spacing) {
+    point(x, 759); 
   }
   
-  text("Bottle Of Love",155,658);
-  text("Bottle Of Kisses",587,658);
-}
 
-/*
-class Box {
-  float x, y;
-  float width, height;;
   
-  Box(int x,int y, int width, int height){
-   
-  }
-}
-*/
-
-void display(){
-  
+  text("Bottle\nOf\nLove",267,658); // My first time actually using /n for spaces
+  text("Bottle\nOf\nKisses",693,658); 
+  bottleData.display();
 }
