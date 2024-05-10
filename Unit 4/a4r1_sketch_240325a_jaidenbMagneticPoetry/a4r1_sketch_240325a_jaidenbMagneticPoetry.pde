@@ -24,13 +24,13 @@ int b2X = 520;
 
 void setup(){
   size(1000,1000);
-  strokeWeight(4);
+  strokeWeight(5);
   
   test = loadFont("TimesNewRomanPSMT-48.vlw");
   textFont(test);
-  textSize(39);
+  textSize(25);
   textAlign(CENTER);
- bottleData = new Bottles(75,800,747,600);
+ bottleData = new Bottles(125,350,17,30);
 
 }
 

@@ -10,7 +10,7 @@ class Bottles{
   }
 
 
-  // Method to display the box
+  // Method to display the box ( I need to update this into a bottle shape now)
   void display() {
     fill(0); 
     for (int i = 0; i < bHeight; i++) {
