@@ -31,7 +31,6 @@ void setup(){
   textSize(25);
   textAlign(CENTER);
  bottleData = new Bottles(125,350,17,30);
-
 }
 
 void draw(){
