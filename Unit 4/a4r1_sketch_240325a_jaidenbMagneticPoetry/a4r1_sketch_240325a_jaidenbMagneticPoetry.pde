@@ -2,6 +2,9 @@
   Assignment 4, Prompt 1
   Magnetic Poetry
   
+  This art piece consist of two bottles represening hugs and kisses (X and Os). I was planning
+  on making it interactive but I'm literally doing this at the last moment lol.
+  
   Art Piece: Unusual Love Poem by Andrew Belsey (1987)
   Source: https://www.themarginalian.org/2014/05/23/typewriter-art-laurence-king/
 
@@ -105,4 +108,8 @@ void draw(){
   
   bottleData.display();
   bottleData2.display();
+  
+  if (frameCount == 5){
+      save("JaidenbUnit4Recipe1.png");
+    }
 }
