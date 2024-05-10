@@ -44,8 +44,14 @@ void draw(){
   */
   float spacing = 20;
 
-  for (float x = 47; x <= 200; x += spacing) {
+  for (float x = 171; x <= 380; x += spacing) { // bottle 1
     point(x, 759); 
+    point(x, 615);
+  }
+  
+   for (float x = 598; x <= 816; x += spacing) { // bottle 2
+    point(x, 759); 
+    point(x, 615);
   }
   
 
