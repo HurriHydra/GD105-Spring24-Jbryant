@@ -8,25 +8,23 @@
 */
 Bottle bottleData;
 Bottle2 bottleData2;
+
 // (Setting up my variables for the bottles) \\
 PFont test;
 
-String love = "0";
+String love = "O";
 String kisses = "X";
 
 int bottlesWidth = 20;
 int bottlesHeight = 23;
 int bottleCap = 100;
 int capX = 232;
-int capY = 100;
+int capY = 50;
 
-int cap2X = 645;
-int cap2Y = 100;
-  
-int b1X = 75; // Y? 747 // bottle
-int b1Y = 747;
+int cap2X = 675;
+int cap2Y = 50;
 
-//int b2X = 520;
+int diagonalNum = 5;
 
 void setup(){
   size(1000,1000);
@@ -37,7 +35,7 @@ void setup(){
   textSize(25);
   textAlign(CENTER);
   bottleData = new Bottle(125,350,17,30);
-  bottleData2 = new Bottle2(550,350,17,30);
+  bottleData2 = new Bottle2(570,350,17,30);
 }
 
 void draw(){
@@ -50,8 +48,8 @@ void draw(){
       point(x, 615);
   }
 // (Setting up text lines for bottle 2) \\
-  for (float x = 598; x <= 816; x += spacing) { 
-      point(x, 759); 
+  for (float x = 612; x <= 816; x += spacing) { 
+      point(x, 757); 
       point(x, 615);
   }
   
@@ -67,9 +65,43 @@ void draw(){
       text(kisses, x, y);
     }
   }
+// (Diagonal: Love) \\
+
+  for (int i = 0; i < diagonalNum; i++) {
+    float x = i * spacing; 
+    float y = i * spacing; 
+    text(love, 331 + x, 268 + y); 
+  }
+  
+  for (int i = diagonalNum - 1; i >= 0; i--) { //Reverse  way for love
+    float x = i * spacing; 
+    float y = (diagonalNum - i - 1) * spacing;
+    text(love, 128 + x, 268 + y); 
+  }
+  
+// (Diagonal: Kisses) \\
+
+  for (int i = 0; i < diagonalNum; i++) {
+    float x = i * spacing; 
+    float y = i * spacing; 
+    text(kisses, 778 + x, 268 + y); 
+  }
+  
+  for (int i = diagonalNum - 1; i >= 0; i--) { //Reverse way for kisses
+    float x = i * spacing; 
+    float y = (diagonalNum - i - 1) * spacing;
+    text(kisses, 571 + x, 268 + y); 
+  }
+  
+//(Using text to finish up the bottle to save me trouble) \\
+
+  text("O\nO\nO\nO",232,156);
+  text("O\nO\nO\nO",312,156);
+  text("X\nX\nX\nX",674,156);
+  text("X\nX\nX\nX",755,156);
   
   text("Bottle\nOf\nLove",267,658); // My first time actually using /n for spaces
-  text("Bottle\nOf\nKisses",693,658); 
+  text("Bottle\nOf\nKisses",720,658); 
   
   bottleData.display();
   bottleData2.display();

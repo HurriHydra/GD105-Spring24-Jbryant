@@ -1,6 +1,6 @@
 class Bottle{
   int x, y;
-  int bWidth, bHeight; //Grabs the bottle width and height
+  int bWidth, bHeight; 
   
   Bottle(int xposition, int yposition, int width, int height){
     x = xposition;
