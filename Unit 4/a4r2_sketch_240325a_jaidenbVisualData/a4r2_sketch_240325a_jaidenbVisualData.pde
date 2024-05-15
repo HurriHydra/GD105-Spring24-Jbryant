@@ -10,12 +10,13 @@
 */
 
 // (Variables) \\
+String[] roleColors = {"Blue Role", "White Role", "Pink Role", "Red Role"};
 PFont waffleText;
 PImage waffleBg;
 
 int boxSize = 123;
 int BoxposX =  15;
-
+boolean test = false;
 
 void setup(){
   
@@ -41,12 +42,23 @@ void draw(){
   fill(#dea646);
   rect(2,93,565,53);
   rect(173,168,387,81);
-  rect(192,280,348,377);
+  rect(192,280,367,370);
   
   // (Text) \\
   fill(0);
   text("Waffle Hunter Stats", 288, 59); 
   text("Choose your role color!", 288, 129); 
+  
+  if(test == true){
+      text(roleColors[1],365,221); // Experimenting 
+      
+      text("Rank:",270,366); // Experimenting 
+      text("Waffle Level: " + "1" ,372,475); // Experimenting 
+      text("Difficulty: " + "1",341,576); // Experimenting 
+      
+        fill(255);
+        circle(402,355,96);
+  }
   
   drawBoxes();
 }
@@ -61,4 +73,8 @@ void drawBoxes(){ // I attempted to call a function to see if it made the code a
   square(BoxposX,548,boxSize);
   fill(#ff3e3e); // Red Box
   square(BoxposX,742,boxSize);
+}
+
+void mousePressed(){
+  test = !test;
 }
