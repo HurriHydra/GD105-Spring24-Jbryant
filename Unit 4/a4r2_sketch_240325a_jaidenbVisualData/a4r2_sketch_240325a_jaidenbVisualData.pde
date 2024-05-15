@@ -11,6 +11,9 @@
 
 // (Variables) \\
 String[] roleColors = {"Blue Role", "White Role", "Pink Role", "Red Role"};
+int[] waffleLevel = {8, 6, 5, 7};// I got the data from asking people on discord depending on their role color. Most people are from different servers
+int[] difficultyLevel = {0, 2, 3, 1};
+Roledata[] roleBox = new Roledata[4];
 PFont waffleText;
 PImage waffleBg;
 
@@ -27,6 +30,12 @@ void setup(){
   
   textFont(waffleText);
   textAlign(CENTER);
+  
+  // (Assigning square locations and colors through the class arrays) \\
+  roleBox[0] = new Roledata(roleColors[0], color(62, 137, 255), waffleLevel[0], difficultyLevel[0], BoxposX, 175, boxSize);
+  roleBox[1] = new Roledata(roleColors[1], color(255, 255, 255), waffleLevel[1], difficultyLevel[1], BoxposX, 355, boxSize);
+  roleBox[2] = new Roledata(roleColors[2], color(242, 92, 255), waffleLevel[2], difficultyLevel[2], BoxposX, 548, boxSize);
+  roleBox[3] = new Roledata(roleColors[3], color(255, 62, 62), waffleLevel[3], difficultyLevel[3], BoxposX, 742, boxSize);
 }
 
 void draw(){
@@ -48,7 +57,8 @@ void draw(){
   fill(0);
   text("Waffle Hunter Stats", 288, 59); 
   text("Choose your role color!", 288, 129); 
-  
+
+
   if(test == true){
       text(roleColors[1],365,221); // Experimenting 
       
@@ -59,22 +69,16 @@ void draw(){
         fill(255);
         circle(402,355,96);
   }
+
+  for (Roledata role : roleBox) {
+    role.display();
+  }
   
-  drawBoxes();
 }
 
-void drawBoxes(){ // I attempted to call a function to see if it made the code any cleaner
- 
-  fill(#3E89FF); // Blue Box
-  square(BoxposX,175,boxSize);
-  fill(#f3f4f6); // White Box
-  square(BoxposX,355,boxSize);
-  fill(#f25cff); // Pink Box
-  square(BoxposX,548,boxSize);
-  fill(#ff3e3e); // Red Box
-  square(BoxposX,742,boxSize);
-}
-
-void mousePressed(){
-  test = !test;
+// (This function only works if the mouse is inside a box) \\
+void mouseClicked(){
+ for (Roledata role : roleBox) {
+    role.checkClick(mouseX, mouseY);
+  }
 }
