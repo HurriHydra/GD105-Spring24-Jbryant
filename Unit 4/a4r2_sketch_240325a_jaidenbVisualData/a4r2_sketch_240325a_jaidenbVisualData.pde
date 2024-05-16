@@ -7,13 +7,18 @@
   to get answers but I did it. The max people for each role color is 8 and
   I will represent the purchases as a RPG stat menu!
   
+  Click on any of the boxes to display info!
+  
 */
 
 // (Variables and Arrays) \\
+
+// (I got the data from asking people on discord depending on their role color. Most people are from different servers) \\
 String[] roleColors = {"Blue Role", "White Role", "Pink Role", "Red Role"};
+
 color[] rankColors = {color(168, 76, 15), color(184, 184, 184), color(230, 181, 21)};
-int[] waffleLevel = {8, 6, 5, 7};// I got the data from asking people on discord depending on their role color. Most people are from different servers
-int[] difficultyLevel = {0, 2, 3, 1};
+int[] waffleLevel = {8, 6, 5, 7}; // The data for the amount of people who liked waffles.
+int[] difficultyLevel = {0, 2, 3, 1}; // The data for people who didn't like waffles or never had them.
 Roledata[] roleBox = new Roledata[4];
 
 PFont waffleText;
@@ -21,7 +26,6 @@ PImage waffleBg;
 
 int boxSize = 123;
 int BoxposX =  15;
-boolean test = false;
 
 void setup(){
   

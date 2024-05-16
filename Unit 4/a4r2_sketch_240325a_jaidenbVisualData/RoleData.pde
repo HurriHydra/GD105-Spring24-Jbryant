@@ -10,21 +10,21 @@ class Roledata {
   
   Roledata(String roleInfo, color roleColors, color rankColor, float waffleLevel, float difficultyLevel, float xPos, float yPos, float rectSize) {
   colorName = roleInfo;
-  roleColor = roleColors;
-  rankClr = rankColor;
-  waffleLv = waffleLevel;
-  difficultyLv = difficultyLevel;
+  roleColor = roleColors; 
+  rankClr = rankColor; // Color of the circle
+  waffleLv = waffleLevel; // People who likes waffles
+  difficultyLv = difficultyLevel; // People who never had or dislike waffles
   x = xPos;
   y = yPos;
   size = rectSize;
   clicked = false;
  }
  
-  void display() {
+void display() {
     fill(roleColor);
     rect(x, y, size, size);
     
-    if (clicked) {
+    if (clicked) { // 
       
      text(colorName,365,221); 
       
@@ -37,16 +37,17 @@ class Roledata {
     }
   }
   
-   void checkClick(float mouseX, float mouseY) {
-    if (mouseX > x && mouseX < x + size && mouseY > y && mouseY < y + size) {
+  //( This function is set up where you can only click inside the box) \\
+void checkClick(float mouseX, float mouseY) {
+      if (mouseX > x && mouseX < x + size && mouseY > y && mouseY < y + size) {
       // Toggle clicked state
       clicked = !clicked;
       
       for (Roledata role : roleBox) { // Turns off boolean for other boxes so it can display only one
         if (role != this) {
           role.clicked = false;
+          }
         }
       }
     }
-  }
 }
