@@ -5,6 +5,7 @@ class GameData{
   GameData(color pColor){
      playerColor = pColor;
    }
+   
 
   void Display(){
     

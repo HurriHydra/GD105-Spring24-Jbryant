@@ -5,7 +5,6 @@
 
 */
 
-
 PFont arial;
 boolean colorSwap = false;
 boolean up, down, left, right;
@@ -15,11 +14,16 @@ float circleX;
 float circleY;
 float circleSpeed = 7;
 
+int timerDuration = 60; 
+int startTime = millis();
+int elapsedTime;
+int remainingTime;
+
 GameData data;
 
 void setup(){
   size(850,850);
-  arial = createFont("Arial",50);
+  arial = createFont("Arial",45);
   data = new GameData(defaultColor);
   circleX = width / 2;
   circleY = height / 2;
@@ -29,7 +33,14 @@ void setup(){
 void draw(){
   background(0);
   textFont(arial);
-  text(second(),27,70);
+ // (Setting up a minute timer) \\
+  elapsedTime = millis() - startTime;
+  remainingTime = timerDuration - int(elapsedTime / 1000);
+  text("Seconds Left: " + remainingTime, 3, 842);
+  
+  if(elapsedTime == 56){
+    background(255);
+  }
   
   fill(defaultColor);
 
