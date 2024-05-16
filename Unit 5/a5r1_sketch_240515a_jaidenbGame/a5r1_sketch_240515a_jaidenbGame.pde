@@ -2,6 +2,12 @@
   Assignment 5, Prompt 1
   The Game
   
+     Controls
+ W,A,S,D = Moving
+ J = Change color
+ 
+ The main goal of the game is to collect as many coins as you can before the
+ timer runs out.
 
 */
 
