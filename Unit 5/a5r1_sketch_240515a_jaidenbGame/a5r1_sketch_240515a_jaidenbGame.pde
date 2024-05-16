@@ -19,6 +19,12 @@ int startTime = millis();
 int elapsedTime;
 int remainingTime;
 
+Coin[] coins;
+int numCoins = 5; 
+int maxCoins = 10; 
+int score = 0;
+
+
 GameData data;
 
 void setup(){
@@ -28,6 +34,11 @@ void setup(){
   circleX = width / 2;
   circleY = height / 2;
   noStroke();
+  
+  coins = new Coin[maxCoins];
+  for (int i = 0; i < numCoins; i++) {
+    spawnCoin(i);
+  }
 }
 
 void draw(){
@@ -37,10 +48,19 @@ void draw(){
   elapsedTime = millis() - startTime;
   remainingTime = timerDuration - int(elapsedTime / 1000);
   text("Seconds Left: " + remainingTime, 3, 842);
+  text("Score: " + score, 3, 800);
   
-  if(elapsedTime == 56){
-    background(255);
-  }
+  for (int i = 0; i < numCoins; i++) {
+    if (coins[i] != null) {
+        coins[i].display();
+        if (coins[i].checkCollision(circleX, circleY, 50)) {
+            score++;
+            coins[i] = null; 
+            spawnCoin(i); 
+        }
+    }
+}
+
   
   fill(defaultColor);
 
@@ -75,14 +95,12 @@ void draw(){
    if (key == 'w' || key == 'W'){
      up = true;
    }
-   
    if (key == 's' || key == 'S'){
      down = true;
    }
-   
-   
-  if (key == 'j' || key == 'J') {
-    // Toggle circle color between light red and light blue
+   // ( Switches between blue and red) \\
+   if (key == 'j' || key == 'J') {
+    
     if (defaultColor == #83DDFF) {
       defaultColor = #FF8686;
     } else {
@@ -90,21 +108,27 @@ void draw(){
     }
   }
 }
+   
+  
+
 
  void keyReleased(){
    if (key == 'a' || key == 'A'){
      left = false;
    }
-   
    if (key == 'd' || key == 'D'){
      right = false;
    }
-   
    if (key == 'w' || key == 'W'){
      up = false;
    }
-   
    if (key == 's' || key == 'S'){
      down = false;
    }
  }  
+ 
+void spawnCoin(int index) {
+  float coinX = random(50, width - 50);
+  float coinY = random(50, height - 50);
+  coins[index] = new Coin(coinX, coinY, 20, color(255, 255, 0)); // Yellow coin
+}
