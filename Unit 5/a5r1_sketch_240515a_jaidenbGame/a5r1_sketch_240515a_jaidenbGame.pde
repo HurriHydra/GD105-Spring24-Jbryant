@@ -82,7 +82,6 @@ void draw(){
   
    ellipse(circleX, circleY, 50, 50);
    
-  data.Display();
 }
 
  void keyPressed(){
