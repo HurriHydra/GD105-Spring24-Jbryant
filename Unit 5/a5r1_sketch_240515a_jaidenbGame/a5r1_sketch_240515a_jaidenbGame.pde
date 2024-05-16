@@ -91,6 +91,10 @@ void draw(){
   
   
    ellipse(circleX, circleY, 50, 50);
+   
+   if (frameCount == 5){
+  save("jaidenbUnit5Game.png");
+ }
 }
 
  void keyPressed(){
