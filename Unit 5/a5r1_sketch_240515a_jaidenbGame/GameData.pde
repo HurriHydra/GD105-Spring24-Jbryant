@@ -8,6 +8,7 @@ class GameData{
 
   void Display(){
     rect(500,400,30,200);
+  
    }
 
 }

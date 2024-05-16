@@ -5,7 +5,8 @@
 
 */
 
-PFont hewlo;
+
+PFont arial;
 boolean colorSwap = false;
 boolean up, down, left, right;
 color defaultColor = #83DDFF;
@@ -18,30 +19,36 @@ GameData data;
 
 void setup(){
   size(850,850);
-  hewlo = createFont("Arial",50);
+  arial = createFont("Arial",50);
   data = new GameData(defaultColor);
+  circleX = width / 2;
+  circleY = height / 2;
+  noStroke();
 }
 
 void draw(){
   background(0);
-  textFont(hewlo);
+  textFont(arial);
   text(second(),27,70);
   
   fill(defaultColor);
-  
-  if (left){
+
+ 
+ // (Makes it where the player cannot leave the canvas) \\
+  if (left && circleX > 25){  // Check left boundary
     circleX -= circleSpeed;
   }
-  if (right){
+  if (right && circleX < width - 25){  // Check right boundary
     circleX += circleSpeed;
   }
-  if (up){
+  if (up && circleY > 25){  // Check top boundary
     circleY -= circleSpeed;
   }
-  if (down){
+  if (down && circleY < height - 25){  // Check bottom boundary
     circleY += circleSpeed;
   }
- 
+  
+  
    ellipse(circleX, circleY, 50, 50);
    
   data.Display();
