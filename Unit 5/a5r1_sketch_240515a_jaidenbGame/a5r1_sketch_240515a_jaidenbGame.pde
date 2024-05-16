@@ -8,6 +8,8 @@
 PFont arial;
 boolean colorSwap = false;
 boolean up, down, left, right;
+boolean gameOver = false;
+
 color defaultColor = #83DDFF;
 
 float circleX;
@@ -45,11 +47,18 @@ void draw(){
   background(0);
   textFont(arial);
  // (Setting up a minute timer) \\
+ if (!gameOver) {
   elapsedTime = millis() - startTime;
   remainingTime = timerDuration - int(elapsedTime / 1000);
+ }
   text("Seconds Left: " + remainingTime, 3, 842);
   text("Score: " + score, 3, 800);
   
+  if (remainingTime <= 0) {
+    gameOver();
+    startTime = 0;
+  } else {
+  text("Seconds Left: " + remainingTime, 3, 842);
   for (int i = 0; i < numCoins; i++) {
     if (coins[i] != null) {
         coins[i].display();
@@ -57,7 +66,8 @@ void draw(){
             score++;
             coins[i] = null; 
             spawnCoin(i); 
-        }
+         }
+       }
     }
 }
 
@@ -81,7 +91,6 @@ void draw(){
   
   
    ellipse(circleX, circleY, 50, 50);
-   
 }
 
  void keyPressed(){
@@ -130,4 +139,10 @@ void spawnCoin(int index) {
   float coinX = random(50, width - 50);
   float coinY = random(50, height - 50);
   coins[index] = new Coin(coinX, coinY, 20, color(255, 255, 0)); // Yellow coin
+}
+
+void gameOver() {
+  text("Game Over, You got " + score + " coins!", 143, 333);
+  noLoop(); 
+  gameOver = true; 
 }

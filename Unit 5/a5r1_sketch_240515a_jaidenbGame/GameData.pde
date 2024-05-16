@@ -1,5 +1,4 @@
-
-class GameData{
+class GameData {
   color playerColor;
   
   GameData(color pColor){
@@ -7,10 +6,6 @@ class GameData{
    }
    
 
-  void Display(){
-
-    }
-    
 }
 
 class Coin {
